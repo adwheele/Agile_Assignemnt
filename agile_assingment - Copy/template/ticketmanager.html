@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        input {
+            border: none;
+            color: rgb(43, 84, 52);
+            padding: 4px 25px;
+            width:210px;
+            text-decoration: non;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .button {
+            border: none;
+            color: rgb(43, 84, 52);
+            padding: 1px 32px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .input1 {background-color: #008CBA;} /* Blue */
+
+        table, th, td {
+            order:1px solid rgb(255, 255, 255);
+        }
+      </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+    <section class="hero is-success is-fullheight">
+      <div class="hero-body">
+        <div class="container">
+          <head>
+            <style>
+                h1{text-align: center;}
+                h2{text-align: center;}
+                form{text-align: center}
+                table{text-align: center}
+                tr{text-align: center}
+                div{text-align: center}
+                h4{text-align: left}
+            </style>
+          </head>
+          </script>
+
+            <h1 class="title">Ticket Management</h1>
+            <h1 class="subtitle">
+              Regular User Account
+            </h1>
+            
+            <form method="POST"class="form-register">
+              <form>
+                <div>
+                  <button type="submit" class="button" name="SubmitButton" value="Go to Profile">Go to Profile</button>
+                  <button type="submit" class="button" name="SubmitButton" value="CreateTicket">Create A New Ticket</button>
+                </div>
+                <div style="margin-top:5px;">
+                  <input class="center-block" type="text" name="id" placeholder="id you want to modify" />
+                  <button type="submit" class="button" name="SubmitButton" value="Modify">Modify</button>
+                </div>
+              </form>
+            {% block content %}{% endblock %}
+          </div>
+      </div>
+    </section>
+  </body>
+</html>

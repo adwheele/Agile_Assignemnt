@@ -1,0 +1,40 @@
+{% extends 'adminticketmanager.html' %}
+{% block content %}
+    <div class="container"> 
+        <style>
+            sub {
+            border: none;
+            color: rgb(0, 0, 52);
+            padding: 10px 10px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 100px;
+            cursor: pointer;
+        }
+        h2{text-align: left;}
+        </style>
+        <h2>List of Tickets</h2>
+        {% for x in data %}
+        <p>
+            <table class="table table-striped">
+            <thead>
+            <tr>
+            <th>ID</th>
+            <th>Issue</th>
+            <th>Email Address</th>
+            <th>Date & Time</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>{{ x.TID }}</td>
+            <td>{{ x.Issue }}</td>
+            <td>{{ x.Email_Address}}</td>
+            <td>{{ x.Date }}</td>
+            </tr>
+            </tbody>
+            </table>
+        </p>
+        {% endfor %}
+    </div>
+{% endblock %}
